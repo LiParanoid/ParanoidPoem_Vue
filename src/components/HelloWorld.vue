@@ -14,6 +14,7 @@
         <el-col :span="8">
             <div class="grid-content bg-purple"></div>
         </el-col>
+        <label @click="getInfo">{{showMsg}}</label>
     </el-row>
 
 </template>
@@ -35,7 +36,7 @@
                 var that = this;
                 that.$http({
                     method: 'GET',
-                    url: 'api/hello' //this指data
+                    url: 'api/index' //this指data
                 }).then(response => {
                     alert(JSON.stringify(response));
                     that.showMsg = response["data"];
