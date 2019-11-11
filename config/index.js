@@ -13,14 +13,20 @@ module.exports = {
     proxyTable: {
         '/api': {
             target: 'http://47.94.204.106:80/',
+            // target: 'http://localhost:8080/',
             changeOrigin: true,
-          }
+          },
+          // pathRewrite: {
+
+          //   '^/api': '' //需要rewrite重写的,
+            
+          //   } 
     },
 
     // Various Dev Server settings
     // host: '192.168.1.106', // can be overwritten by process.env.HOST
     host: 'localhost',
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8088, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
